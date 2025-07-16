@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Seller } from '../services/seller';
 
 @Component({
   selector: 'app-seller-auth',
@@ -7,9 +8,14 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './seller-auth.html',
   styleUrl: './seller-auth.css'
 })
-export class SellerAuth {
+export class SellerAuth implements OnInit {
+
+  constructor(private seller: Seller) {}
+
+  ngOnInit(): void {}
 
   signUp(data:object):void{
-    console.warn(data);
-  }
+    console.warn("Seller Service Call");
+    this.seller.userSignUp();
+  } 
 }
