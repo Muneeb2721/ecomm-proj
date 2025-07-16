@@ -1,0 +1,28 @@
+{
+  "seller": [
+    {
+      "id": "ed90",
+      "name": "Muneeb Nadeem",
+      "email": "muneebnadeem@seller.com",
+      "password": "abc@123"
+    },
+    {
+      "id": "501a",
+      "name": "mubeen",
+      "email": "mubeen@seller.com",
+      "password": "abd@124"
+    },
+    {
+      "id": "3c4a",
+      "name": "moeen",
+      "email": "moeen@seller.com",
+      "password": "abe@125"
+    },
+    {
+      "id": "bb33",
+      "name": "meerab",
+      "email": "meerab@seller.com",
+      "password": "ace@135"
+    }
+  ]
+}
