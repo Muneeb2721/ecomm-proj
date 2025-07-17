@@ -15,7 +15,13 @@ export class SellerAuth implements OnInit {
   ngOnInit(): void {}
 
   signUp(data:object):void{
-    console.warn("Seller Service Call");
-    this.seller.userSignUp();
+    console.log("Seller Service Call", data);
+    this.seller.userSignUp(data).subscribe((res)=>{
+      console.log(res,'fffffffffff');
+      
+    }, (err)=> {
+      console.log(err,'dddddddddddd');
+      
+    });
   } 
 }
