@@ -4,6 +4,8 @@ import { SellerAuth } from './seller-auth/seller-auth';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { SellerHome } from './seller-home/seller-home';
+import { AuthGuard } from './auth-guard';
 
 
 export const routes: Routes = [
@@ -14,6 +16,11 @@ export const routes: Routes = [
     {
         path: 'seller-auth',
         component: SellerAuth 
+    },
+    {
+        component: SellerHome,
+        path: 'seller-home',
+        canActivate: [AuthGuard]
     }
 ];
 

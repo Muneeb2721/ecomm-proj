@@ -1,17 +1,36 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-
+import { HttpClient } from '@angular/common/http';
+import { SignUp } from '../data-type';
+import { BehaviorSubject } from 'rxjs';
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root',
 })
+
 export class Seller {
-  constructor(private _http: HttpClient){}
-  userSignUp(data: any): Observable<any>{
-    return this._http.post<any>('http://localhost:3001/seller',data,{
-      headers: {
-        'Content-Type': 'application/json'
-      }
+  isSellerLoggedIn = new BehaviorSubject<boolean>(false);
+  constructor(private http: HttpClient, private router: Router) {}
+
+  userSignUp(data:SignUp){
+    this.http
+    .post('http://localhost:3000/seller', data, { observe: 'response' })
+    .subscribe((result) => {
+      this.isSellerLoggedIn.next(true);
+      localStorage.setItem('seller', JSON.stringify(result.body));
+      this.router.navigate(['/seller-home']);
     });
   }
-}
+  reloadSeller() {
+    if (localStorage.getItem('seller')) {
+      this.isSellerLoggedIn.next(true);
+      // this.router.navigate(['/seller-home']);
+      // let sellerStore = localStorage.getItem('seller');
+      // let sellerData = sellerStore ? JSON.parse(sellerStore) : null;
+      // this.http
+      //   .get(`http://localhost:3000/seller/${sellerData.id}`)
+      //   .subscribe((result) => {
+      //     this.isSellerLoggedIn.next(true);
+      //   });
+    }
+  }
+} 

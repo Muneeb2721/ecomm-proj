@@ -53,6 +53,48 @@
       "name": "axis",
       "password": "123@axis",
       "email": "axis@seller.com"
+    },
+    {
+      "id": "47e5",
+      "name": "tony",
+      "password": "123#abc",
+      "email": "stark@seller.com"
+    },
+    {
+      "id": "d5e7",
+      "name": "bruce",
+      "password": "abc@123",
+      "email": "lee@test.com"
+    },
+    {
+      "id": "c9d2",
+      "name": "jon",
+      "password": "123@abc",
+      "email": "cina@test.com"
+    },
+    {
+      "id": "1197",
+      "name": "alex",
+      "password": "123@abc",
+      "email": "alex@test.com"
+    },
+    {
+      "id": "1441",
+      "name": "huzaifa",
+      "password": "123@abc",
+      "email": "huzaifa@test.com"
+    },
+    {
+      "id": "4948",
+      "name": "adnan",
+      "password": "123@abc",
+      "email": "adnan@test.com"
+    },
+    {
+      "id": "48ba",
+      "name": "usman",
+      "password": "123",
+      "email": "usman@test.com"
     }
   ]
 }
