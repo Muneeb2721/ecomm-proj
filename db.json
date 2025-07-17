@@ -41,6 +41,18 @@
       "name": "test",
       "password": "123",
       "email": "test@gmail.com"
+    },
+    {
+      "id": "5f14",
+      "name": "hr",
+      "password": "123@hr",
+      "email": "hr@seller.com"
+    },
+    {
+      "id": "fc8d",
+      "name": "axis",
+      "password": "123@axis",
+      "email": "axis@seller.com"
     }
   ]
 }
