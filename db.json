@@ -23,6 +23,24 @@
       "name": "meerab",
       "email": "meerab@seller.com",
       "password": "ace@135"
+    },
+    {
+      "id": "8f6a",
+      "name": "meerab",
+      "email": "meerab@seller.com",
+      "password": "ace@135"
+    },
+    {
+      "id": "4ea5",
+      "name": "meerab",
+      "email": "meerab@seller.com",
+      "password": "ace@135"
+    },
+    {
+      "id": "bed6",
+      "name": "test",
+      "password": "123",
+      "email": "test@gmail.com"
     }
   ]
 }
