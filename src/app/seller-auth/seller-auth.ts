@@ -12,16 +12,40 @@ import { SignUp } from '../data-type';
 
 export class SellerAuth implements OnInit {
 
-  constructor(private seller: Seller, private router: Router) { 
-    // This constructor initializes the Seller service and Router for navigation.
-  }
+  constructor(private seller: Seller, private router: Router) {}
   
+  showLogin = false;
+
   ngOnInit(): void {
     this.seller.reloadSeller();
-  } 
+  }
 
   signUp(data: SignUp): void {
     console.log("Seller Service Call", data);
-    this.seller.userSignUp(data)
+    // this.seller.userSignUp(data)
   }
-} 
+
+  login(data: any): void {
+    console.log("Data from login function", data);
+    this.seller.userLogin(data).subscribe((result: any) => {
+        console.log(result);
+        if( result && result.body && result.body.length) {
+          console.log("Login successful", result.body);
+          this.seller.isSellerLoggedIn.next(true);
+          localStorage.setItem('seller', JSON.stringify(result.body));
+          this.router.navigate(['/seller-home']);
+        } else {
+          alert('Please enter valid details');
+        }
+      });;
+  }
+
+  openLogin(): void {
+    this.showLogin = true;
+    console.log('Login view:', this.showLogin);
+  }
+
+  openSignUp(): void {
+    this.showLogin = false;
+  }
+}

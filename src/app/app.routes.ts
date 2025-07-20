@@ -16,7 +16,8 @@ export const routes: Routes = [
     {
         path: 'seller-auth',
         component: SellerAuth 
-    },
+    }
+    ,
     {
         component: SellerHome,
         path: 'seller-home',

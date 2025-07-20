@@ -95,6 +95,21 @@
       "name": "usman",
       "password": "123",
       "email": "usman@test.com"
+    },
+    {
+      "id": "3715",
+      "email": "anil laise",
+      "password": "sidhu123"
+    },
+    {
+      "id": "c4ef",
+      "email": "haris",
+      "password": "123"
+    },
+    {
+      "id": "f48c",
+      "email": "muneebnadeem1870@gmail.com",
+      "password": "2123333"
     }
   ]
 }

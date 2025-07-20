@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { SignUp } from '../data-type';
+import { Login, SignUp } from '../data-type';
 import { BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
 @Injectable({
@@ -23,14 +23,14 @@ export class Seller {
   reloadSeller() {
     if (localStorage.getItem('seller')) {
       this.isSellerLoggedIn.next(true);
-      // this.router.navigate(['/seller-home']);
-      // let sellerStore = localStorage.getItem('seller');
-      // let sellerData = sellerStore ? JSON.parse(sellerStore) : null;
-      // this.http
-      //   .get(`http://localhost:3000/seller/${sellerData.id}`)
-      //   .subscribe((result) => {
-      //     this.isSellerLoggedIn.next(true);
-      //   });
+      this.router.navigate(['/seller-home']);
     }
   }
-} 
+
+  userLogin(data: Login) {
+    return this.http
+      .get(`http://localhost:3000/seller?email=${data.email}&password=${data.password}`, 
+        { observe: 'response' })
+  }
+
+}

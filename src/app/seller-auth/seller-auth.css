@@ -1,6 +1,21 @@
-.sign-up {
+.sign-up, .login {
     text-align: center;
+}
+
+.sign-up h1, .login h1 {
     color: blueviolet;
     margin-top: 80px;
     margin-bottom: 50px;
+}
+
+.auth-toggle-link {
+    color: blueviolet;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.auth-toggle-link .span:hover {
+    color: rgb(9, 9, 77);
 }
