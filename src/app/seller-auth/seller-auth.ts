@@ -15,6 +15,7 @@ export class SellerAuth implements OnInit {
   constructor(private seller: Seller, private router: Router) {}
   
   showLogin = false;
+  authError: string = '';
 
   ngOnInit(): void {
     this.seller.reloadSeller();
