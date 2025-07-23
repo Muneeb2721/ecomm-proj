@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { SellerHome } from './seller-home/seller-home';
 import { AuthGuard } from './auth-guard';
+import { SellerAddProduct } from './seller-add-product/seller-add-product';
 
 
 export const routes: Routes = [
@@ -23,14 +24,19 @@ export const routes: Routes = [
         path: 'seller-home',
         canActivate: [AuthGuard]
     }
+    ,
+    { 
+        component: SellerAddProduct,
+        path: 'seller-add-product',
+        canActivate: [AuthGuard]
+    }
 ];
 
 @NgModule({
     imports: [
         RouterModule.forRoot(routes),
         FormsModule,
-        Home,
-        
+        Home
     ],
     exports: [RouterModule]
 })
