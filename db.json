@@ -111,5 +111,25 @@
       "email": "muneebnadeem1870@gmail.com",
       "password": "2123333"
     }
+  ],
+  "products": [
+    {
+      "id": "5da3",
+      "name": "AirPods",
+      "price": "$3",
+      "category": "Accessories",
+      "color": "Black",
+      "image": "https://www.google.com/search?sca_esv=572ab1811f4a88fa&sxsrf=AE3TifMNO6rpLjxvEC-zpz45NW6bsP3gKQ:1753188515741&q=airpods&udm=2&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIejIPgyyGM1YJJNz-u26A7UQjdzW_3QjQoz5M3kGxMbP-hsv_gnnY7-OxgCwuMdxSJ0p3oDQZ3sksfTWxYNEZMSBHW0lwQZL51xWnUB5zd5Dqhphln6EnYQm2V0JcepoqqTsaqxfMPyickjpxZaDpAs_A3mNt&sa=X&ved=2ahUKEwjkp9GVwNCOAxUaVKQEHTwgHewQtKgLKAF6BAgUEAE&cshid=1753188590285877&biw=1732&bih=862&dpr=0.75",
+      "description": "Hello, to my airpods shop."
+    },
+    {
+      "id": "8292",
+      "name": "Airpods",
+      "price": "1200",
+      "color": "black",
+      "category": "Accessories",
+      "description": "dfd",
+      "image-url": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQA/wMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAAAQIDBAUGB//EAEAQAAEDAgQEAwUDCgUFAAAAAAEAAgMEEQUSITEGQVFhEyJxMkJSgZEUI9EVM0RTcpKhscHwBxZDYoIkg4STov/EABgBAQEBAQEAAAAAAAAAAAAAAAABAgME/8QAHhEBAAICAgMBAAAAAAAAAAAAAAERAgMhMRJBURP/2gAMAwEAAhEDEQA/APaUJUIBCEII5KeKQWe1rvkqU2ERP1jOS/JaSUIOemwmoZ7IDx2VN8b4/aY4eoXWpr42P0c0H1CJTkkLoZsKp5L5RkP+1UZsGnbrG5rx3RKZiFJLBLD+cjcB1soiqFQkukLrIKtVcOvZXKGo0DSVQrZcguVFTTW8wKxlDvqyrh0zdgU5U6OfxGC51VwLD0QEqEKKEIQgRCVIgSyEqECJEqECISpEAhCEG1fslXPDhhnu4vjQ/wDMcVsYdRChpxD488+t8878zvquzwrKUJbICACEJUCJUJHODRcmw7oFRoq0lYwXDNSqr6lz3hpO/JBoPkjykOsW+iyqulgncC1ojA3y81M4kkKCR2U6IIvsFPzc76pDh1OdpHj53UuY9kmdClWbBqWZtnTSeosoYuHaWMnLUSn1srxebbp0cpvYqLdIYMLjhNxO8q2IWW9sp+UKJ7rG2yUsZ5Qd4bPj+qXw2fGPqoM1zulBKUv6ZJvDb8aQw6aHVMDkrJDfdKWNmRliNwhTvGdvdQkarExTvhn5QahLZCy2ahKhAiEIQ"
+    }
   ]
 }
