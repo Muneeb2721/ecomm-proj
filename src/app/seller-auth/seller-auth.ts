@@ -18,8 +18,9 @@ export class SellerAuth implements OnInit {
   authError: string = '';
 
   ngOnInit(): void {
-    this.seller.reloadSeller();
-  }
+    this.seller.reloadSeller(); 
+  } 
+  
 
   signUp(data: SignUp): void {
     console.log("Seller Service Call", data);

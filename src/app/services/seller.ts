@@ -26,7 +26,7 @@ export class Seller {
       this.router.navigate(['/seller-home']);
     }
   }
-
+  
   userLogin(data: Login) {
     return this.http
       .get(`http://localhost:3000/seller?email=${data.email}&password=${data.password}`, 
