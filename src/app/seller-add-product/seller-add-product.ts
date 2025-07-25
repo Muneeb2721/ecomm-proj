@@ -11,7 +11,7 @@ import { response } from 'express';
   styleUrls: ['./seller-add-product.css']
 })
 export class SellerAddProduct implements OnInit {
-  addProductMessage:string = '';
+  
   constructor(private product: Product) {}
 
   ngOnInit(): void {}
@@ -19,15 +19,6 @@ export class SellerAddProduct implements OnInit {
   submitForm(data: productDataType) {
     console.log('SellerAddProduct File:', data)
     
-    this.product.addProduct(data).subscribe((res: any)=>{
-      if(res) {
-        this.addProductMessage = "Product is successfully added.";
-      }
-
-      setTimeout(() => { 
-      this.addProductMessage = '';
-      console.log("Message cleared.");
-      }, 3000);
-  });
+    this.product.addProduct(data).subscribe((res: any)=>{});
 }
 }
