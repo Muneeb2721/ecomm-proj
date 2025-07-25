@@ -20,9 +20,16 @@ export class Product {
     console.log("product list console.");
     return this.http.get<productDataType[]>('http://localhost:3000/products');
   }
-
-  deleteProductList(id:string) {
+  
+  deleteProduct(id:string) {
     return this.http.delete(`http://localhost:3000/products/${id}`);
   }
- 
+  
+  getProduct(id:string) {
+    return this.http.get<productDataType>(`http://localhost:3000/products/${id}`);
+  }
+
+  updateProduct(product:productDataType) {
+    return this.http.put(`http://localhost:3000/products/${product.id}`, product);
+  }
 }
