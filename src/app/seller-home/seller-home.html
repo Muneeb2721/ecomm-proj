@@ -1,30 +1,38 @@
-<div class="product-list">
-    <h1>All Product List</h1>
-     <div>
-        <p style="color: black;">{{showProductList}}</p>
-     </div>
-    <table>
-        <thead>
-            <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Color</th>
-                <th>Category</th>
-                <th>Description</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of showProductList">
-                <td><img src="{{item?.image}}" alt="Mobile Image"></td>
-                <td>{{item?.name}}</td>
-                <td>{{item?.price}}</td>
-                <td>{{item?.color}}</td>
-                <td>{{item?.category}}</td>
-                <td>{{item?.description}}</td>
-                <td><button (click)="deleteProduct(item.id)">Delete</button></td>
-            </tr>
-        </tbody>
-    </table>
+<div class="product-list" *ngIf="productList?.length">
+  <h1>Product List</h1>
+  <p class="message-p">{{ productMessage }}</p>
+
+  <ng-container *ngIf="productList?.length; else loading">
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Color</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of productList">
+        <td><img [src]="item.image" /></td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.color }}</td>
+        <td>{{ item.category }}</td>
+        <td>{{ item.description }}</td>
+        <td class="product-btn">
+          <button (click)="deleteProduct(item.id)">Delete</button>
+          <button class="adjust-update-link" (click)="sellerUpdateProduct(item.id)">Update</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </ng-container>
+
+  <ng-template #loading>
+    <p>Loading products...</p>
+  </ng-template>
 </div>
