@@ -1,51 +1,46 @@
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { productDataType} from '../data-type';
 import { Product } from '../services/product';
-import { productDataType } from '../data-type';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Router } from '@angular/router';
 @Component({
   selector: 'app-seller-home',
-  imports: [CommonModule],
   templateUrl: './seller-home.html',
-  styleUrl: './seller-home.css'
+  styleUrls: ['./seller-home.css'],
+  imports: [CommonModule]
 })
 export class SellerHome implements OnInit {
-  showProductList: productDataType[] =[];
-  deleteProductMessage: undefined | string;
-
-  constructor(private product: Product,
-    private http: HttpClient,
-    @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
+  productList: productDataType[] = []; 
+  productMessage: string = '';
+  
+  constructor(private product: Product, private route: Router) {}
 
   ngOnInit(): void {
-    console.log('ddddddddddddddddddddd', this.platformId);
-    if (isPlatformBrowser(this.platformId)) {
-    this.List();
-    }
+    this.list();
   }
-  deleteProduct(id: string) {
-    console.log("testing Id: ", id);
 
-    this.product.deleteProductList(id).subscribe((result) => {
+  deleteProduct(id: string) {
+    this.product.deleteProduct(id).subscribe((result) => {
       if (result) {
-        this.deleteProductMessage = 'Product Deleted';
-        this.List();
+        this.productMessage = 'Product is deleted';
+        this.list();
       }
     });
-
     setTimeout(() => {
-      this.deleteProductMessage = undefined;
+      this.productMessage = '';
     }, 3000);
   }
 
-  List() {
-    this.product.productList().subscribe(
-      (result) => {
-        this.showProductList = result;
-
-        console.log("List Functionssssssssssssss",this.showProductList);
+  list() {
+    this.product.productList().subscribe((result) => {
+      if (result) {
+        this.productList = result;
       }
-    )
+    });
   }
+
+  sellerUpdateProduct(id: string) {
+  this.route.navigate(['/seller-update-product', id]);
+  }
+
 }
