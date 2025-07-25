@@ -37,4 +37,8 @@ export class Header implements OnInit {
     this.route.navigate(['/']);
     this.menuType = 'default';
   }
+
+  sellerHome() {
+    this.route.navigate(['/seller-home']);
+  }
 }
