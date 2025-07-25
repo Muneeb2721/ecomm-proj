@@ -7,6 +7,8 @@ import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { SellerHome } from './seller-home/seller-home';
 import { AuthGuard } from './auth-guard';
 import { SellerAddProduct } from './seller-add-product/seller-add-product';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SellerUpdateProduct } from './seller-update-product/seller-update-product';
 
 
 export const routes: Routes = [
@@ -30,6 +32,11 @@ export const routes: Routes = [
         path: 'seller-add-product',
         canActivate: [AuthGuard]
     }
+    ,
+    { 
+        component: SellerUpdateProduct,
+        path: 'seller-update-product/:id'
+    }
 ];
 
 @NgModule({
@@ -37,6 +44,7 @@ export const routes: Routes = [
         RouterModule.forRoot(routes),
         FormsModule,
         Home,
+        FontAwesomeModule,
     ],
     exports: [RouterModule],
     providers: [NgZone]
