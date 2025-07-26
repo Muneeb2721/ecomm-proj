@@ -1,0 +1,50 @@
+
+
+.carousel {
+  /* background-color: black; */
+  margin: 0 auto;
+  width: 60%;
+  border-radius: 30px;
+  position: relative;
+  top: 7rem;
+}
+
+.carousel-image {
+  margin: 0 auto;
+  width: 550px;
+  height: 300px;
+  border-radius: 0px;
+}
+
+.carousel-caption {
+  background-color: rgb(34, 33, 33);
+  z-index: 1000;
+    width: 50%;
+    position: relative;
+    top: -7rem;
+    left: 10rem;
+}
+
+.carousel-inner {
+  width: 100%;
+  height: 23rem;
+  margin: 0 auto;
+  border-radius: 20px;
+  
+}
+
+.carousel-control-prev, .carousel-control-next {
+  background-color: black;
+  height: 3rem;
+  width: 2rem;
+  position: absolute;
+  top: 10rem;
+}
+
+.carousel-control-prev {
+  left: 1rem;
+}
+
+.carousel-control-next {
+  right: 1rem;
+}
