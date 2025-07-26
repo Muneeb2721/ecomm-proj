@@ -1,5 +1,4 @@
 import { RouterModule, Routes } from '@angular/router';
-import { Home } from './home/home';
 import { SellerAuth } from './seller-auth/seller-auth';
 import { NgModule, NgZone } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -9,6 +8,8 @@ import { AuthGuard } from './auth-guard';
 import { SellerAddProduct } from './seller-add-product/seller-add-product';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SellerUpdateProduct } from './seller-update-product/seller-update-product';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { Home } from './home/home';
 
 
 export const routes: Routes = [
@@ -43,8 +44,8 @@ export const routes: Routes = [
     imports: [
         RouterModule.forRoot(routes),
         FormsModule,
-        Home,
         FontAwesomeModule,
+        NgbCarouselModule
     ],
     exports: [RouterModule],
     providers: [NgZone]
