@@ -1,11 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { productDataType } from '../data-type';
+import { Product } from '../services/product';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
-  imports: [],
   templateUrl: './home.html',
-  styleUrl: './home.css'
+  styleUrls: ['./home.css'],
+  imports: [CommonModule]
 })
-export class Home {
 
+export class Home implements OnInit {
+ popularProducts: productDataType[] | undefined;
+  constructor(private product:Product) {}
+
+  ngOnInit(): void {
+    this.product.popularProducts().subscribe((result) => {
+      this.popularProducts = result;
+      console.log("gdddddddddddddd", this.popularProducts)
+    });
+  }
 }

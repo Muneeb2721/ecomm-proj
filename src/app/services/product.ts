@@ -32,4 +32,8 @@ export class Product {
   updateProduct(product:productDataType) {
     return this.http.put(`http://localhost:3000/products/${product.id}`, product);
   }
+
+  popularProducts(): Observable<productDataType[]> {
+    return this.http.get<productDataType[]>('http://localhost:3000/products');
+  }
 }
